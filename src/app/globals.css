@@ -384,7 +384,6 @@
 
     hyphens: auto;
     -webkit-hyphens: auto;
-    text-wrap: pretty;
 }
 
 .swiper-bars {

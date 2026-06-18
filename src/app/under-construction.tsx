@@ -9,7 +9,8 @@ const pillars = [
 
 const UnderConstruction = () => {
     return (
-        <div className="bg-[#0a0a0a] w-screen min-h-dvh max-h-dvh overflow-hidden text-white flex items-center justify-center p-2">            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_center,rgba(255,255,255,0.05),transparent_45%)]" />
+        <div className="bg-[#0a0a0a] w-screen min-h-dvh max-h-dvh overflow-hidden text-white flex items-center justify-center p-2">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_center,rgba(255,255,255,0.05),transparent_45%)]" />
             <div className="flex flex-col">
                 <div className="flex flex-col justify-between items-center gap-2 w-full">
                     {/* Contenedor del Logo */}
