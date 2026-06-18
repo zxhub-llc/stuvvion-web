@@ -234,7 +234,34 @@ const ctaData: CTADataProps = {
 };
 
 export const metadata: MetaDataProps = {
-	title: "Leaflife - Garden Landscape Design Service Website",
+	title: "Stuvvion — Tech Partner & Build Studio",
+	description: "We build the technical foundation for modern digital products. Premium software engineering, cloud architecture, and DevOps scaling.",
+	keywords: ["software engineering", "cloud architecture", "devops", "next.js", "aws", "saas platform"],
+	alternates: {
+		canonical: "https://stuvvion.com",
+		types: {
+			'text/plain': [
+				{ url: 'https://stuvvion.com/llms.txt', title: 'LLM Context' },
+			],
+		},
+	},
+	robots: {
+		index: true,
+		follow: true,
+	},
+	openGraph: {
+		title: "Stuvvion — Tech Partner & Build Studio",
+		description: "Engineering stable, secure, and scalable production environments for startups and enterprises.",
+		url: "https://stuvvion.com",
+		siteName: "Stuvvion",
+		type: "website",
+		locale: "en_US",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Stuvvion — Tech Partner & Build Studio",
+		description: "We build the technical foundation for modern digital products.",
+	}
 };
 
 export default function HomePage() {

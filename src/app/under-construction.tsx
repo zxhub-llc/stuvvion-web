@@ -39,13 +39,13 @@ const UnderConstruction = () => {
             <div className="uc-content">
 
                 {/* Logo responsivo con filtro invert */}
-                <div style={{ width: '90%', minWidth: '200px', maxWidth: '900px', position: 'relative', marginBottom: '28px' }}>
+                <div className="uc-logo">
                     <Image
                         src="/assets/img/stuvvion_logo.png"
                         alt="Stuvvion Logo"
                         width={1}
                         height={1}
-                        sizes="90vw"
+                        sizes="(max-width: 768px) 90vw, 900px"
                         style={{
                             width: '100%',
                             height: 'auto',
@@ -58,11 +58,14 @@ const UnderConstruction = () => {
 
                 {/* Título en Inter por defecto, el span hereda Ivy Ora Display */}
                 <h2 className="uc-title">
-                    Something great<br />is under <span className={ivyOraDisplay.className}>construction.</span>
+                    Something great is under{" "}
+                    <span className={ivyOraDisplay.className}>
+                        construction.
+                    </span>
                 </h2>
 
                 <p className="uc-subtitle">
-                    We are aligning vision, strategy, and execution<br />
+                    We are aligning vision, strategy, and execution
                     to deliver the impact you deserve.
                 </p>
 
@@ -96,7 +99,7 @@ const UnderConstruction = () => {
 
             <style>{`
 .uc-root {
-  min-height: 100vh;
+  min-height: 100dvh;
   background: #0a0a0a;
   display: flex;
   flex-direction: column;
@@ -106,13 +109,20 @@ const UnderConstruction = () => {
   position: relative;
   overflow: hidden;
 }
-.uc-bg-lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+
+.uc-logo {
+  width: min(90vw, 900px);
+  min-width: 180px;
+  margin-bottom: 28px;
 }
+
+@media (max-width: 480px) {
+  .uc-logo {
+    width: 95vw;
+    margin-bottom: 20px;
+  }
+}
+
 .uc-content {
   position: relative;
   z-index: 2;
@@ -123,96 +133,41 @@ const UnderConstruction = () => {
   max-width: 560px;
   width: 100%;
 }
-.uc-brand-name {
-  font-size: clamp(28px, 5vw, 38px);
-  font-weight: 600;
-  letter-spacing: 0.35em;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
-.uc-tagline {
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  color: #A34E2F;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-.uc-divider {
-  width: 48px;
-  height: 1px;
-  background: #A34E2F;
-  margin-bottom: 40px;
-  opacity: 0.7;
-}
+
 .uc-title {
   font-size: clamp(36px, 6vw, 52px);
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 0.04em;
   line-height: 1.15;
   margin-bottom: 16px;
 }
-.uc-title span { 
-  color: #ffffff;
-  font-style: italic;
-  font-weight: 300;
-}
+
 .uc-subtitle {
   font-size: 13px;
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 0.08em;
   line-height: 1.8;
   margin-bottom: 48px;
 }
+
 .uc-pillars {
   display: flex;
   gap: 32px;
   align-items: center;
   margin-bottom: 52px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .uc-pillar {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
-.uc-pillar-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #A34E2F;
-}
-.uc-pillar-dot.active { opacity: 1; }
-.uc-pillar-dot.impact { background: #fff; box-shadow: 0 0 12px #fff }
-.uc-pillar-label {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.uc-pillar-label.impact { color: #A34E2F; }
-.uc-pillar-sep {
-  width: 20px; height: 1px;
-  background: #fff;
-}
-.uc-contact {
-  font-size: 13px;
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: 0.1em;
-}
-.uc-contact a { 
-    color: #fff; 
-}
 
-.uc-contact a:hover { 
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: #A34E2F;
-    text-underline-offset: 4px;
-}
 .uc-bottom-line {
   position: absolute;
   bottom: 32px;
@@ -220,11 +175,107 @@ const UnderConstruction = () => {
   transform: translateX(-50%);
   font-size: 9px;
   letter-spacing: 0.3em;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 500;
-  white-space: nowrap;
   z-index: 2;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+@media (max-width: 768px) {
+
+  .uc-root {
+    padding: 2rem 1.5rem;
+  }
+
+  .uc-title {
+    font-size: 42px;
+  }
+
+  .uc-subtitle {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .uc-pillars {
+    gap: 24px;
+  }
+
+  .uc-pillar-sep {
+    display: none;
+  }
+
+  .uc-bottom-line {
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    width: calc(100% - 40px);
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+@media (max-width: 480px) {
+
+  .uc-root {
+    padding: 1.5rem 1rem;
+    justify-content: center;
+  }
+
+  .uc-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .uc-subtitle {
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .uc-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 36px;
+  }
+
+  .uc-pillars > div {
+    justify-content: center;
+  }
+
+  .uc-pillar-sep {
+    display: none;
+  }
+
+  .uc-pillar-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .uc-contact {
+    font-size: 11px;
+    word-break: break-word;
+  }
+
+  .uc-bottom-line {
+    position: static;
+    transform: none;
+    margin-top: 32px;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.12em;
+  }
 }
       `}</style>
         </div>

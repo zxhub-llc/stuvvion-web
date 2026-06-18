@@ -217,6 +217,49 @@ export interface LoginFormData {
 // Metadata Type
 export interface MetaDataProps {
 	title: string;
+	description: string;
+	keywords?: string[] | string;
+	alternates?: {
+		canonical?: string;
+		types?: {
+			[key: string]: string | { url: string; title?: string }[];
+		};
+	};
+	robots?: {
+		index?: boolean;
+		follow?: boolean;
+		nocache?: boolean;
+		googleBot?: {
+			index?: boolean;
+			follow?: boolean;
+			noimageindex?: boolean;
+			'max-video-preview'?: number | string;
+			'max-image-preview'?: 'none' | 'standard' | 'large';
+			'max-snippet'?: number;
+		};
+	};
+	openGraph?: {
+		title?: string;
+		description?: string;
+		url?: string;
+		siteName?: string;
+		images?: {
+			url: string;
+			width?: number;
+			height?: number;
+			alt?: string;
+		}[];
+		locale?: string;
+		type?: 'website' | 'article' | 'book' | 'profile';
+	};
+	twitter?: {
+		card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+		title?: string;
+		description?: string;
+		site?: string;
+		creator?: string;
+		images?: string[];
+	};
 }
 
 export interface ProjectDetailsDataProps {
