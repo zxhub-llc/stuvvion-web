@@ -5,8 +5,6 @@ const pillars = [
     "Vision",
     "Strategy",
     "Creativity",
-    "Technology",
-    "Execution",
 ];
 
 const UnderConstruction = () => {
@@ -51,75 +49,13 @@ const UnderConstruction = () => {
                     <div className="flex flex-col w-full md:max-w-4xl mx-auto items-center justify-center text-center">
 
                         <p className=" text-white leading-tight font-extralight text-lg">
-                            We are shaping an experience where <span className="font-ivy-presto italic capitalize">strategy,
-                                creativity, and technology</span> converge to transform ideas into solutions that stand the test of time.
+                            We are shaping an experience where <span className="font-ivy-presto italic capitalize">strategy, creativity, and technology</span>{" "} converge to transform ideas into lasting solutions & refined through every detail with <span className="font-ivy-presto italic capitalize">precision, quality, and innovation,</span>{" "}where each element is carefully crafted to define the future of STUVVION.
                         </p>
                     </div>
                 </div>
 
 
-                <div className="relative w-full max-w-8xl flex flex-col items-center justify-center px-6 text-white gap-3 pb-6">
-                    <div className="grid grid-cols-6 md:grid-cols-5 gap-3 w-full">
-                        {pillars.map((pillar, index) => (
-                            <div
-                                key={pillar}
-                                className={`
-                rounded-full
-                bg-white/10
-                px-4 py-2
-                text-center
-                transition-all
-                hover:bg-white/25
-
-                md:col-span-1
-
-                ${index < 3
-                                        ? "col-span-2"
-                                        : "col-span-3"
-                                    }
-            `}
-                            >
-                                <span className="text-sm text-zinc-200 tracking-wide block first-letter:uppercase">
-                                    {pillar}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full">
-                        {[
-                            "Built with intention",
-                            "Created with precision",
-                            "Designed to endure",
-                            "Innovation with purpose",
-                        ].map((item) => (
-                            <div
-                                key={item}
-                                className="
-                w-full
-                flex items-center justify-center
-                rounded-full
-                bg-white/10
-                px-4 py-2
-                transition-all
-                hover:bg-white/25
-            "
-                            >
-                                <span className="text-center text-sm text-zinc-200 tracking-wide">
-                                    {item}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex flex-col w-full md:max-w-4xl mx-auto items-center justify-center text-center">
-
-                        <p className=" text-white leading-tight font-extralight text-lg">
-                            We are refining every detail to deliver an
-                            experience defined by <span className="font-ivy-presto italic capitalize">quality, precision,
-                                and innovation.</span><br /> Every element is being
-                            carefully crafted to represent the future
-                            of <span className="font-ivy-presto italic">STUVVION.</span>
-                        </p>
-                    </div>
+                <div className="relative w-full max-w-8xl flex flex-col items-center justify-center px-6 text-white gap-3 pb-10">
                     <div className="flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2 transition-all hover:bg-white/25">
                         <div className="text-md capitalize text-white">
                             Contact:
@@ -135,19 +71,25 @@ const UnderConstruction = () => {
 
                 <div className="w-full flex flex-col items-center justify-center gap-2 px-4 pb-6">
                     {/* Frase de Cierre / Call to Action */}
-                    <div className="text-xl md:text-2xl font-sans font-light tracking-tight text-white text-center">
-                        Your vision, <span className="font-ivy-presto italic">in action.</span>
-                    </div>
+                    <span
+                        className="text-white text-lg md:text-xl lg:text-2xl font-light tracking-[-0.04em] leading-[0.95] text-center max-w-4xl mx-auto">
+                        Your vision,{" "}
+                        <span className="font-ivy-presto italic font-normal">
+                            in action.
+                        </span>
+                    </span>
 
                     {/* Pilares / Keywords */}
-                    <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-[10px] md:text-xs font-light tracking-[0.3em] text-white text-center">
-                        <span>Precision</span>
-                        <span className="text-zinc-700 font-normal select-none">•</span>
-                        <span>Innovation</span>
-                        <span className="text-zinc-700 font-normal select-none">•</span>
-                        <span>Excellence</span>
-                        <span className="text-zinc-700 font-normal select-none">•</span>
-                        <span>Impact</span>
+                    <div className="flex items-center justify-center gap-3 w-full">
+                        {pillars.map((pillar, index) => (
+                            <div
+                                key={pillar}
+                                className={`rounded-full bg-white/10 px-4 py-2 text-center transition-all hover:bg-white/25 md:col-span-1`}>
+                                <span className="text-sm text-zinc-200 tracking-wide block first-letter:uppercase">
+                                    {pillar}
+                                </span>
+                            </div>
+                        ))}
                     </div>
 
                     {/* Copyright */}
@@ -156,7 +98,6 @@ const UnderConstruction = () => {
                     </div>
                 </div>
             </div>
-
             <AOSInit />
         </div>
     );
