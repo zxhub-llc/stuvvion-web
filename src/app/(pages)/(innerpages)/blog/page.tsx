@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BlogDataProps,
 	BreadCrumbsDataProps,
@@ -123,9 +124,12 @@ const SidebarData: SidebarDataProps = {
 	},
 };
 
-export const metadata: MetaDataProps = {
-	title: "Blogs - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Insights & Engineering Blog",
+	description:
+		"Articles on software engineering, cloud architecture, DevOps, SaaS development, and technology leadership.",
+	path: "/blog",
+});
 
 export default function BlogPage() {
 	return (

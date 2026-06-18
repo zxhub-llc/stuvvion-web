@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	CardOneDataProps,
@@ -11,9 +12,12 @@ import InfoList from "@/app/ui/InfoSection";
 import PageHeading from "@/app/ui/PageHeading";
 import ProjectSlider from "@/app/ui/ProjectsSection/ProjectSlider";
 
-export const metadata: MetaDataProps = {
-	title: "Projects - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Projects & Success Stories",
+	description:
+		"Discover how Stuvvion helps organizations design, build, and scale modern software platforms.",
+	path: "/projects",
+});
 
 export default function ProjectPage() {
 	const BreadcrumbsData: BreadCrumbsDataProps = {

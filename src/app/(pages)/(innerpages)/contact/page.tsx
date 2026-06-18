@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	CardDataProps,
@@ -8,9 +9,12 @@ import CardSection from "@/app/ui/CardSection";
 import ContactSection from "@/app/ui/Contact";
 import PageHeading from "@/app/ui/PageHeading";
 
-export const metadata: MetaDataProps = {
-	title: "Contact - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Contact Stuvvion",
+	description:
+		"Let's discuss your next project. Contact our team for software engineering, cloud architecture, DevOps, and digital product development.",
+	path: "/contact",
+});
 
 export default function ContactPage() {
 	const BreadcrumbsData: BreadCrumbsDataProps = {

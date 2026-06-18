@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import { BreadCrumbsDataProps, MetaDataProps } from "@/app/types";
 import PageHeading from "@/app/ui/PageHeading";
 
@@ -10,9 +11,12 @@ const BreadcrumbsData: BreadCrumbsDataProps = {
 	],
 };
 
-export const metadata: MetaDataProps = {
-	title: "Privacy Policy - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Privacy Policy",
+	description:
+		"Learn how Stuvvion collects, uses, and protects your information.",
+	path: "/privacy-policy",
+});
 
 export default function privacyPolicy() {
 	return (

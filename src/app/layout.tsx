@@ -4,10 +4,22 @@ import "swiper/css";
 import "./sass/style.scss";
 import { ToastContainer } from "react-toastify";
 import { GlobalChildrenProps } from "./types";
+import type { Metadata } from "next";
+import { defaultMetadata } from "./lib/metadata";
+
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({ children }: GlobalChildrenProps) {
 	return (
 		<html lang="en">
+			<head>
+				<link
+					rel="alternate"
+					type="text/plain"
+					href="https://stuvvion.com/llms.txt"
+					title="LLM Context"
+				/>
+			</head>
 			<body>
 				{children}
 				<ToastContainer

@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	AboutUsDataProps,
 	BrandDataProps,
@@ -178,9 +179,12 @@ const cardData: CardDataProps = {
 	buttonLink: "/projects",
 };
 
-export const metadata: MetaDataProps = {
-	title: "About Us - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "About Stuvvion",
+	description:
+		"Learn about Stuvvion, our mission, engineering culture, and how we help startups and enterprises build scalable digital products.",
+	path: "/about",
+});
 
 export default function AboutPage() {
 	return (

@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import { BreadCrumbsDataProps, MetaDataProps } from "@/app/types";
 import PageHeading from "@/app/ui/PageHeading";
 
@@ -10,9 +11,12 @@ const BreadcrumbsData: BreadCrumbsDataProps = {
 	],
 };
 
-export const metadata: MetaDataProps = {
-	title: "Terms And Condition - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Terms & Conditions",
+	description:
+		"Terms governing the use of Stuvvion services, website, and digital platforms.",
+	path: "/terms-and-conditions",
+});
 
 export default function termsAndCondition() {
 	return (

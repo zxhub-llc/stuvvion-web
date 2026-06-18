@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	CardDataProps,
@@ -76,9 +77,12 @@ const cardData: CardDataProps = {
 	buttonLink: "/projects",
 };
 
-export const metadata: MetaDataProps = {
-	title: "Gallery - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Case Studies & Portfolio",
+	description:
+		"Explore selected projects, product launches, cloud migrations, and engineering success stories delivered by Stuvvion.",
+	path: "/gallery",
+});
 
 export default function GalleryPage() {
 	return (

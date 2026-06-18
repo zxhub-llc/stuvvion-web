@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	MetaDataProps,
@@ -133,10 +134,11 @@ const serviceData: ServiceDataProps = {
 	],
 };
 
-export const metadata: MetaDataProps = {
-	title: "Project Details - Garden Landscape Design Service Website",
-};
-
+export const metadata = createMetadata({
+	title: `${BreadcrumbsData.title} | Case Study`,
+	description: projectDetailsData.description.slice(0, 160),
+	path: "/projects/project-detail",
+});
 export default function ProjectDetailsPage() {
 	return (
 		<>

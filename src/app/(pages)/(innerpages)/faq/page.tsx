@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	CardDataProps,
@@ -86,9 +87,12 @@ const faqData2: FaqDataProps = {
 	],
 };
 
-export const metadata: MetaDataProps = {
-	title: "Faq - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Frequently Asked Questions",
+	description:
+		"Find answers about our services, engagement models, development process, and technology expertise.",
+	path: "/faq",
+});
 
 export default function FaqPage() {
 	return (

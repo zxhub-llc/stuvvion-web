@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BlogDetailsDataProps,
 	BreadCrumbsDataProps,
@@ -133,9 +134,16 @@ const cardData: CardDataProps = {
 	buttonLink: "/blog/blog-details",
 };
 
-export const metadata: MetaDataProps = {
-	title: "Blog Details - Garden Landscape Design Service Website",
-};
+const firstParagraph =
+	blogData.content.find(item => item.text)?.text ?? "";
+
+export const metadata = createMetadata({
+	title: `${blogData.title} | Stuvvion`,
+	description: firstParagraph
+		.replace(/<[^>]*>/g, "")
+		.slice(0, 160),
+	path: "/blog/blog-detail",
+});
 
 export default function BlogDetailsPage() {
 	return (
