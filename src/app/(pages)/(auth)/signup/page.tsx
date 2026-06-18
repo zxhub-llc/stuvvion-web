@@ -1,0 +1,37 @@
+import Link from "next/link";
+import Image from "next/image";
+import RegisterForm from "@/app/ui/Forms/RegisterForm";
+
+function Register() {
+	return (
+		<div className="cs_card cs_style_10">
+			<div className="cs_card_left">
+				<div className="cs_card_card_out">
+					<Link href="/" className="cs_login_logo">
+						<Image
+							src="/assets/img/logo_2.svg"
+							alt="Logo"
+							width={150}
+							height={50}
+							priority
+						/>
+					</Link>
+					<div className="cs_card_card_in">
+						<h1 className="cs_section_title cs_fs_32 cs_bold cs_medium cs_mb_30">
+							Create your account
+						</h1>
+						<RegisterForm />
+					</div>
+				</div>
+			</div>
+			<div
+				className="cs_card_right cs_bg_filed"
+				style={{
+					backgroundImage: `url(/assets/img/login_img.jpg)`,
+				}}
+			/>
+		</div>
+	);
+}
+
+export default Register;
