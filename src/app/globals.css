@@ -376,6 +376,17 @@
     scrollbar-width: none;
 } */
 
+.word-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: center;
+    -moz-text-align-last: center;
+
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    text-wrap: pretty;
+}
+
 .swiper-bars {
     position: absolute !important;
     bottom: 40px !important;

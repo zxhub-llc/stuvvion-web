@@ -9,9 +9,7 @@ const pillars = [
 
 const UnderConstruction = () => {
     return (
-        <div className="bg-[#0a0a0a] max-w-screen min-h-screen relativo overflow-x-hidden text-white flex justify-center p-2 items-center">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_center,rgba(255,255,255,0.05),transparent_45%)]" />
-
+        <div className="bg-[#0a0a0a] w-screen min-h-dvh max-h-dvh overflow-hidden text-white flex items-center justify-center p-2">            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_center,rgba(255,255,255,0.05),transparent_45%)]" />
             <div className="flex flex-col">
                 <div className="flex flex-col justify-between items-center gap-2 w-full">
                     {/* Contenedor del Logo */}
@@ -40,16 +38,15 @@ const UnderConstruction = () => {
                         Created with precision.
                     </span>
                     <span
-                        className="text-white text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.04em] leading-[0.95] text-center max-w-4xl mx-auto">
+                        className="text-white text-2xl md:text-5xl lg:text-6xl font-light tracking-[-0.04em] leading-[0.95] text-center max-w-4xl mx-auto">
                         Everything we build begins with a clear{" "}
                         <span className="font-ivy-presto italic font-normal">
                             vision.
                         </span>
                     </span>
-                    <div className="flex flex-col w-full md:max-w-4xl mx-auto items-center justify-center text-center">
-
+                    <div className="flex flex-col w-full md:max-w-4xl mx-auto items-center justify-center word-justify md:text-center">
                         <p className=" text-white leading-tight font-extralight text-lg">
-                            We are shaping an experience where <span className="font-ivy-presto italic capitalize">strategy, creativity, and technology</span>{" "} converge to transform ideas into lasting solutions & refined through every detail with <span className="font-ivy-presto italic capitalize">precision, quality, and innovation,</span>{" "}where each element is carefully crafted to define the future of STUVVION.
+                            We are shaping an experience where <span className="font-ivy-presto italic">strategy, creativity, and technology</span>{" "} converge to transform ideas into lasting solutions & refined through every detail with <span className="font-ivy-presto italic">precision, quality, and innovation,</span>{" "}where each element is carefully crafted to define the future of STUVVION.
                         </p>
                     </div>
                 </div>
