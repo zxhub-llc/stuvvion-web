@@ -1,4 +1,5 @@
 import AOSInit from "@/app/helper/AosInit";
+import { createMetadata } from "@/app/lib/seo";
 import {
 	CardDataProps,
 	MetaDataProps,
@@ -119,9 +120,16 @@ const cardData: CardDataProps = {
 	tags: ["Home", "Garden", "Landscape Design", "Expert"],
 };
 
-export const metadata: MetaDataProps = {
-	title: "Service Details - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: serviceDetailsData.titleHighlight
+		.replace(/<[^>]*>/g, "")
+		.trim(),
+	description: serviceDetailsData.description
+		.replace(/<[^>]*>/g, "")
+		.replace(/\s+/g, " ")
+		.slice(0, 160),
+	path: "/services/services-details",
+});
 
 export default function ServiceDetailsPage() {
 	return (

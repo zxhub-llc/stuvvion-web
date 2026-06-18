@@ -1,3 +1,4 @@
+import { createMetadata } from "@/app/lib/seo";
 import {
 	BreadCrumbsDataProps,
 	CTADataProps,
@@ -71,9 +72,12 @@ const ctaData: CTADataProps = {
 	buttonUrl: "/contact",
 };
 
-export const metadata: MetaDataProps = {
-	title: "Services - Garden Landscape Design Service Website",
-};
+export const metadata = createMetadata({
+	title: "Software Engineering Services",
+	description:
+		"Explore Stuvvion's services including software engineering, cloud architecture, DevOps consulting, platform engineering, and SaaS development.",
+	path: "/services",
+});
 
 export default function ServicePage() {
 	return (

@@ -6,12 +6,14 @@ import { ToastContainer } from "react-toastify";
 import { GlobalChildrenProps } from "./types";
 import type { Metadata } from "next";
 import { defaultMetadata } from "./lib/metadata";
+import { inter, anton, ivyPresto, ivyOra } from '@/app/lib/fonts';
+import './globals.css'
 
 export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({ children }: GlobalChildrenProps) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${inter.variable} ${ivyPresto.variable} ${ivyOra.variable} ${anton.variable}`}>
 			<head>
 				<link
 					rel="alternate"
